@@ -1,5 +1,6 @@
 import '/transaction.dart';
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
 
 void main() => runApp(MyApp());
 
@@ -24,7 +25,7 @@ class HomePage extends StatelessWidget {
     Transaction(
       id: 'T2',
       title: 'Grocery',
-      amount: 128.32,
+      amount: 12.32,
       date: DateTime.now(),
     ),
   ];
@@ -35,13 +36,23 @@ class HomePage extends StatelessWidget {
         title: Text('Expenses App'),
       ),
       body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
+          Container(
+            width: double.infinity,
+            child: Card(
+              child: Text('Chart'),
+              elevation: 5,
+              color: Colors.blue,
+            ),
+          ),
           Card(
-            child: Container(
-              child: Text('CHART'),
-              width: double.infinity,
+            child: Column(
+              children: [
+                TextField(
+                  cursorColor: Colors.red,
+                ),
+                TextField(),
+              ],
             ),
             elevation: 5,
           ),
@@ -49,17 +60,43 @@ class HomePage extends StatelessWidget {
             children: transactions.map((transaction) {
               return Card(
                 child: Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
                   children: [
                     Container(
+                      margin:
+                          EdgeInsets.symmetric(vertical: 10, horizontal: 10),
                       child: Text(
-                        transaction.amount.toString(),
+                        'Rs ' + transaction.amount.toString(),
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 20,
+                          color: Colors.purple,
+                        ),
                       ),
+                      decoration: BoxDecoration(
+                        border: Border.all(
+                          color: Colors.purple,
+                          width: 2,
+                        ),
+                      ),
+                      padding: EdgeInsets.all(5),
                     ),
                     Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text(transaction.title),
                         Text(
-                          transaction.date.toString(),
+                          transaction.title,
+                          style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            fontSize: 18,
+                          ),
+                        ),
+                        Text(
+                          DateFormat.yMMMd().format(transaction.date),
+                          style: TextStyle(
+                            fontWeight: FontWeight.w500,
+                            color: Colors.grey,
+                          ),
                         )
                       ],
                     ),
