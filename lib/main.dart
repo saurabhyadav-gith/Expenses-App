@@ -46,13 +46,16 @@ class HomePage extends StatelessWidget {
             ),
           ),
           Card(
-            child: Column(
-              children: [
-                TextField(
-                  cursorColor: Colors.red,
-                ),
-                TextField(),
-              ],
+            child: Container(
+              padding: EdgeInsets.all(10),
+              child: Column(
+                children: [
+                  TextField(
+                    decoration: InputDecoration(labelText: 'Title'),
+                  ),
+                  TextField(),
+                ],
+              ),
             ),
             elevation: 5,
           ),
