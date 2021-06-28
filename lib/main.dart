@@ -29,6 +29,12 @@ class HomePage extends StatelessWidget {
       date: DateTime.now(),
     ),
   ];
+  // String titleInput, amount;
+  // OR we can use instead of titleInput and amout is the textEditorController
+
+  final textController = TextEditingController();
+  final amountController = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -49,11 +55,43 @@ class HomePage extends StatelessWidget {
             child: Container(
               padding: EdgeInsets.all(10),
               child: Column(
+                crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   TextField(
-                    decoration: InputDecoration(labelText: 'Title'),
+                    decoration: InputDecoration(
+                      labelText: 'Title',
+                    ),
+                    // onChanged: (value) {
+                    //   titleInput = value;
+                    // },
+                    controller: textController,
                   ),
-                  TextField(),
+                  TextField(
+                    decoration: InputDecoration(
+                      labelText: 'Details',
+                    ),
+                    // onChanged: (value) {
+                    //   amount = value;
+                    // },
+                    controller: amountController,
+                  ),
+                  TextButton(
+                    onPressed: () {
+                      print(textController.text);
+                      print(amountController.text);
+                    },
+                    child: Text(
+                      'Save',
+                      style: TextStyle(
+                        fontStyle: FontStyle.italic,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.black,
+                      ),
+                    ),
+                    style: TextButton.styleFrom(
+                      backgroundColor: Colors.grey,
+                    ),
+                  ),
                 ],
               ),
             ),
