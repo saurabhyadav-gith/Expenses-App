@@ -1,11 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-class NewTransaction extends StatelessWidget {
+class NewTransaction extends StatefulWidget {
   final Function addTransaction;
   NewTransaction(this.addTransaction);
+
+  @override
+  _NewTransactionState createState() => _NewTransactionState();
+}
+
+class _NewTransactionState extends State<NewTransaction> {
   final textController = TextEditingController();
+
   final amountController = TextEditingController();
+
   void submitData() {
     String title = textController.text;
     double amount = double.parse(amountController.text);
@@ -14,10 +22,14 @@ class NewTransaction extends StatelessWidget {
       return;
     }
 
-    addTransaction(
+    widget.addTransaction(
       title,
       amount,
     );
+
+    Navigator.of(context).pop();
+    // the above line is to close the add new transaction menu as soon as the
+    // user hits done filling the title and amount and saves.
   }
 
   @override
