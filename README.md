@@ -1,7 +1,5 @@
-# expenses_app
-(Under Development)
-
-A new Flutter project.
+# My Expenses
+With the help of My Expenses you can add your daily expenditure and can keep a track of how much have you been spending over the weeks.
 
 ## Getting Started
 
