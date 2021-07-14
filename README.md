@@ -1,5 +1,9 @@
 # My Expenses
-With the help of *## My Expenses* you can add your daily expenditure and can keep a track of how much have you been spending over the weeks.
+With the help of **My Expenses** you can add your daily expenditure and can keep a track of how much have you been spending over the weeks.
+
+[x] Add new expenditures.
+[x] View the previously saved expenditure.
+[x] Quick glance at the expenses by a chart.
 
 ## Getting Started
 
