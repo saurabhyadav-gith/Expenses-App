@@ -6,18 +6,26 @@ With the help of **My Expenses** you can add your daily expenditure and can keep
 - [x] Quick glance at the expenses from a chart.
 
 ## User Interface
-
+<!-- 
 | Description | View |
 | ----------- | ---- |
-| Home Page / Dashboard | <img src = "https://user-images.githubusercontent.com/61821926/125618790-7e01f8ed-a33f-42c6-8be0-0613486d8b49.png" width = "200" /> |
-| Dashboard | <img src = "https://user-images.githubusercontent.com/61821926/125619580-c6b67318-7905-481c-a934-ce1c117c51e5.png" width = "200" /> |
-| Add expenditure | <img src = "https://user-images.githubusercontent.com/61821926/125620339-4790c327-5f02-4da3-a417-db94f8767451.png" width = "200" /> |
-
-
-
-
-
-
+| Home Page / Dashboard |  |
+| Dashboard | |
+| Add expenditure | | -->
+<div>
+  <span>
+<img src = "https://user-images.githubusercontent.com/61821926/126292313-6dbc1029-0c89-40e6-9910-c54c49bed83f.png" width = "250" />
+    
+  </span>  
+  <span>
+<img src = "https://user-images.githubusercontent.com/61821926/126292324-5e01e9d0-588c-4740-885a-1b051149b482.png" width = "250" />
+    
+  </span>
+  <span>
+<img src = "https://user-images.githubusercontent.com/61821926/126292336-5b031e6f-9063-4017-b220-b21730f14242.png" width = "250" /> 
+    
+  </span>
+</div>
 
 ## Getting Started
 
